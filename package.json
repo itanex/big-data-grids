@@ -1,0 +1,27 @@
+{
+  "name": "big-data-grids",
+  "version": "1.0.0",
+  "description": "big data grids",
+  "main": "index.html",
+  "scripts": {
+    "lite": "lite-server",
+    "sass": "node-sass -r 'styles/' -o 'styles/'",
+    "sass:w": "node-sass -w -r 'styles/' -o 'styles/'",
+    "start": "concurrently 'npm run lite' 'npm run sass:w'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itanex/big-data-grids.git"
+  },
+  "author": "Bryan Wood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itanex/big-data-grids/issues"
+  },
+  "homepage": "https://github.com/itanex/big-data-grids#readme",
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "lite-server": "^2.2.2",
+    "node-sass": "^3.11.2"
+  }
+}
