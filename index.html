@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app" ng-controller="AppController">
+<html ng-app="app">
 
 <head>
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css" />
@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles/ui-grid.css" />
 
   <script src="vendor/angular/angular.min.js"></script>
-  <script src="vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="vendor/angular-sanitize/angular-sanitize.min.js"></script>
   <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
   <script src="vendor/angular-ui-grid/ui-grid.min.js"></script>
 
@@ -20,9 +20,8 @@
   <script src="scripts/app.js"></script>
   <script src="scripts/common/common.js"></script>
   <script src="scripts/common/ui-virtual-list.js"></script>
-  <script src="scripts/home/home.js"></script>
-  <script src="scripts/home/home-controller.js"></script>
-  <script src="scripts/home/record-service.js"></script>
+  <script src="scripts/home-controller.js"></script>
+  <script src="scripts/record-service.js"></script>
 
   <title>Big Data and Grids</title>
 </head>
@@ -36,8 +35,7 @@
       </div>
     </div>
   </nav>
-
-  <div class="container" role="main" ui-view="main"></div>
+  <div class="container" role="main" ng-include src="'partials/home.html'"></div>
 </body>
 
 </html>

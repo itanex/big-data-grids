@@ -1,16 +1,17 @@
 (function() {
   'use strict';
 
-  var module = angular.module('app.home');
+  var module = angular.module("app.home", []);
 
   module.controller('HomeController', HomeController);
 
   /*
    *
    */
-  HomeController.$inject = ['$scope', '$state', 'RecordService'];
+  HomeController.$inject = ['$scope', 'RecordService'];
 
-  function HomeController($scope, $state, RecordService) {
+  function HomeController($scope, RecordService) {
+
     // Scope Data
     $scope.simpleRecordCount = null;
     $scope.simpleRecords = [];
@@ -67,11 +68,5 @@
 
       $scope.auigOptions.data = RecordService.largeRecordSet($scope.auigRecordCount);
     };
-
-
-    // Misc
-
-
-
   }
 })();
