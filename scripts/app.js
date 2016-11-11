@@ -40,15 +40,7 @@
   /*
    *
    */
-  AppController.$inject = ['$scope'];
+  AppController.$inject = [];
 
-  function AppController($scope) {
-    $scope.pageTitle = 'loading...';
-
-    $scope.$on('$stateChangeSuccess', function (e, toState, toParams, fromState, fromParams) {
-      if (angular.isDefined(toState.data.pageTitle)) {
-        $scope.pageTitle = toState.data.pageTitle;
-      }
-    });
-  }
+  function AppController() { }
 })();

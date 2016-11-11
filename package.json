@@ -5,9 +5,9 @@
   "main": "index.html",
   "scripts": {
     "lite": "lite-server",
-    "sass": "node-sass -r 'styles/' -o 'styles/'",
-    "sass:w": "node-sass -w -r 'styles/' -o 'styles/'",
-    "start": "concurrently 'npm run lite' 'npm run sass:w'"
+    "sass": "node-sass -r styles/ -o styles/",
+    "sass:w": "node-sass -w -r styles/ -o styles/",
+    "start": "concurrently \"npm run lite\" \"npm run sass:w\""
   },
   "repository": {
     "type": "git",
