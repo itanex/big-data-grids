@@ -1,0 +1,17 @@
+@import 'vendor/yeti-bootstrap';
+@import '../vendor/bootstrap-sass/assets/stylesheets/bootstrap';
+
+@import 'components/table-fix';
+@import 'components/ui-grid';
+@import 'components/ui-virtual-list';
+
+
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+
+.badge {
+    margin: 0 2px;
+}
