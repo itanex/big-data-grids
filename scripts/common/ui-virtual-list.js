@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var module = angular.module('app.common');
+  var module = angular.module('app.common', []);
 
   module.directive('uiVirtualScroll', Directive);
 

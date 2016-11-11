@@ -1,9 +1,9 @@
 (function () {
   'use strict';
 
-  var module = angular.module("app");
+  var module = angular.module("app.bigData");
 
-  module.service('RecordService', Service);
+  module.service('BigDataService', Service);
 
   function Service() {
     var names = [

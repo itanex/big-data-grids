@@ -15,9 +15,13 @@
 
   <script src="scripts/app.js"></script>
   <script src="scripts/common/common.js"></script>
+  <script src="scripts/big-data/big-data.js"></script>
   <script src="scripts/common/ui-virtual-list.js"></script>
-  <script src="scripts/home-controller.js"></script>
-  <script src="scripts/record-service.js"></script>
+  <script src="scripts/big-data/auig-record-controller.js"></script>
+  <script src="scripts/big-data/avs-record-controller.js"></script>
+  <script src="scripts/big-data/large-record-controller.js"></script>
+  <script src="scripts/big-data/simple-record-controller.js"></script>
+  <script src="scripts/big-data/big-data-service.js"></script>
 
   <title>Big Data and Grids</title>
 </head>
@@ -31,7 +35,12 @@
       </div>
     </div>
   </nav>
-  <div class="container" role="main" ng-include src="'partials/home.html'"></div>
+  <div class="container" role="main">
+    <div ng-include src="'partials/simple-record.html'"></div>
+    <div ng-include src="'partials/large-record.html'"></div>
+    <div ng-include src="'partials/avs-record.html'"></div>
+    <div ng-include src="'partials/auig-record.html'"></div>
+  </div>
 </body>
 
 </html>
