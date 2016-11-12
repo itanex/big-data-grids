@@ -8,21 +8,20 @@
   /*
    *
    */
-  SimpleRecordController.$inject = ['$scope', 'BigDataService'];
+  SimpleRecordController.$inject = ['BigDataService'];
 
-  function SimpleRecordController($scope, BigDataService) {
+  function SimpleRecordController(BigDataService) {
+    var vm = this;
 
-    // Scope Data
-    $scope.simpleRecordCount = null;
-    $scope.simpleRecords = [];
+    vm.recordCount = null;
+    vm.records = [];
 
-    // Scope Functions
-    $scope.generateSimple = function() {
-      if($scope.simpleRecordCount > 5000) {
-        $scope.simpleRecordCount = 5000;
+    vm.generateRecords = function() {
+      if(vm.recordCount > 5000) {
+        vm.recordCount = 5000;
       }
 
-      $scope.simpleRecords = BigDataService.basicRecordSet($scope.simpleRecordCount);
+      vm.records = BigDataService.basicRecordSet(vm.recordCount);
     };
   }
 })();

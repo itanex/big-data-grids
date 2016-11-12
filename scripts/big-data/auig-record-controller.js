@@ -8,14 +8,14 @@
   /*
    *
    */
-  AuigRecordController.$inject = ['$scope', 'BigDataService'];
+  AuigRecordController.$inject = ['BigDataService'];
 
-  function AuigRecordController($scope, BigDataService) {
+  function AuigRecordController(BigDataService) {
+    var vm = this;
 
-    // Scope Data
-    $scope.auigRecordCount = null;
+    vm.recordCount = null;
 
-    $scope.auigOptions = {
+    vm.options = {
       enableFiltering: true,
       flatEntityAccess: true,
       showGridFooter: true,
@@ -23,13 +23,12 @@
         //fastWatch: true
     };
 
-    // Scope Functions
-    $scope.generateAuigRecords = function () {
-      if ($scope.auigRecordCount > 1000) {
-        $scope.auigRecordCount = 1000;
+    vm.generateRecords = function () {
+      if (vm.recordCount > 1000) {
+        vm.recordCount = 1000;
       }
 
-      $scope.auigOptions.data = BigDataService.largeRecordSet($scope.auigRecordCount);
+      vm.options.data = BigDataService.largeRecordSet(vm.recordCount);
     };
   }
 })();

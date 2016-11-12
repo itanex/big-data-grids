@@ -1,4 +1,4 @@
-<div class="panel panel-default" ng-controller="AvsRecordController">
+<div class="panel panel-default" ng-controller="AvsRecordController as vm">
     <div class="panel-heading">
         <div class="row">
             <div class="col-xs-6">
@@ -15,9 +15,9 @@
             <div class="col-xs-12">
                 <div class="form-group">
                     <div class="input-group input-group-sm">
-                        <input type="text" class="form-control" ng-model="avsRecordCount" />
+                        <input type="text" class="form-control" ng-model="vm.recordCount" />
                         <span class="input-group-btn">
-              <button class="btn btn-default" type="button" ng-click="generateAvsRecords()">
+              <button class="btn btn-default" type="button" ng-click="vm.generateRecords()">
                 Generate
               </button>
             </span>
@@ -40,7 +40,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr sf-virtual-repeat="record in avsRecords">
+                        <tr sf-virtual-repeat="record in vm.records">
                             <td>{{ record.first }}</td>
                             <td>{{ record.last }}</td>
                             <td>{{ record.email | lowercase }}</td>
@@ -52,6 +52,6 @@
         </div>
     </div>
     <div class="panel-footer">
-        Rendered Records: {{ avsRecords.length }}
+        Rendered Records: {{ vm.records.length }}
     </div>
 </div>
