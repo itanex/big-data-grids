@@ -10,7 +10,7 @@
     "sass": "node-sass -r styles/ -o styles/",
     "sass:w": "node-sass -w -r styles/ -o styles/",
     "start": "concurrently \"npm run lite\" \"npm run tsc:w\" \"npm run sass:w\"",
-    "build": "concurrently \"npm run tsc\" \"npm run sass\""
+    "build": "concurrently \"npm run tsc\"  \"npm run sass\""
   },
   "repository": {
     "type": "git",
