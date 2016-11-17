@@ -31,6 +31,7 @@
     "@types/ng-grid": "0.0.29",
     "concurrently": "^3.1.0",
     "lite-server": "^2.2.2",
-    "node-sass": "^3.11.2"
+    "node-sass": "^3.11.2",
+    "typescript": "^2.0.10"
   }
 }
