@@ -34,6 +34,13 @@
   dependencies:
     "@types/angular" "*"
 
+"@types/ui-grid@^0.0.38":
+  version "0.0.38"
+  resolved "https://registry.yarnpkg.com/@types/ui-grid/-/ui-grid-0.0.38.tgz#6cc994fedb5ad5625b319a4996161bf8d55ee704"
+  dependencies:
+    "@types/angular" "*"
+    "@types/jquery" "*"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

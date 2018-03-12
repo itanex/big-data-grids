@@ -2,7 +2,7 @@ namespace BigDataGrids {
 
   export class AuigRecordController {
     public recordCount: number = null;
-    public options: any = {
+    public options: uiGrid.IGridOptions = {
       enableFiltering: true,
       flatEntityAccess: true,
       showGridFooter: true,

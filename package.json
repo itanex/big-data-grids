@@ -28,6 +28,7 @@
     "@types/angular-ui-bootstrap": "^0.13.46",
     "@types/bootstrap": "^3.3.39",
     "@types/ng-grid": "0.0.29",
+    "@types/ui-grid": "^0.0.38",
     "concurrently": "^3.5.1",
     "lite-server": "^2.3.0",
     "node-sass": "^4.7.2"
