@@ -1,4 +1,4 @@
-module BigDataGrids {
+namespace BigDataGrids {
 
   interface UiVirtualListScope extends ng.IScope {
     height: number;
@@ -19,7 +19,7 @@ module BigDataGrids {
     updateDisplayList(): void;
   }
 
-  class UiVirtualListDirective implements ng.IDirective {
+  export class UiVirtualListDirective implements ng.IDirective {
     public restrict: string = "E";
     public replace: boolean = true;
     public templateUrl: string = 'scripts/common/ui-virtual-list.html';
@@ -88,8 +88,4 @@ module BigDataGrids {
       scope.init();
     }
   }
-
-  angular
-    .module('app.uiVirtualList')
-    .directive('uiVirtualScroll', [() => new UiVirtualListDirective()]);
 }

@@ -1,10 +1,13 @@
-module BigDataGrids {
+namespace BigDataGrids {
 
-  class LargeRecordController {
+  export class LargeRecordController {
     public recordCount: number = null;
     public records: Array<Record> = [];
 
-    static $inject = ['BigDataService'];
+    static $inject = [
+      'BigDataService'
+    ];
+    
     constructor(
       private BigDataService: BigDataService
     ) { }
@@ -17,8 +20,4 @@ module BigDataGrids {
       this.records = this.BigDataService.largeRecordSet(this.recordCount);
     };
   }
-
-  angular
-    .module('app.bigData')
-    .controller('LargeRecordController', LargeRecordController);
 }

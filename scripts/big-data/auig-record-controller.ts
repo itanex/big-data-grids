@@ -1,6 +1,6 @@
-module BigDataGrids {
+namespace BigDataGrids {
 
-  class AuigRecordController {
+  export class AuigRecordController {
     public recordCount: number = null;
     public options: any = {
       enableFiltering: true,
@@ -10,7 +10,10 @@ module BigDataGrids {
       //fastWatch: true
     };
 
-    static $inject = ['BigDataService'];
+    static $inject = [
+      'BigDataService'
+    ];
+
     constructor(
       private BigDataService: BigDataService
     ) { }
@@ -23,8 +26,4 @@ module BigDataGrids {
       this.options.data = this.BigDataService.largeRecordSet(this.recordCount);
     }
   }
-
-  angular
-    .module('app.bigData')
-    .controller('AuigRecordController', AuigRecordController);
 }

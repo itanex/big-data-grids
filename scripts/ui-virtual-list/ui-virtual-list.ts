@@ -1,4 +1,5 @@
-module BigDataGrids {
-  // rename
-  angular.module('app.uiVirtualList', []);
+namespace BigDataGrids {
+  let module = angular.module('app.uiVirtualList', []);
+
+  module.directive('uiVirtualScroll', [() => new UiVirtualListDirective()]);
 }

@@ -1,4 +1,4 @@
-module BigDataGrids {
+namespace BigDataGrids {
 
   export class Record {
     constructor(
@@ -58,7 +58,4 @@ module BigDataGrids {
     }
   }
 
-  angular
-    .module('app.bigData')
-    .service('BigDataService', BigDataService);
 }
